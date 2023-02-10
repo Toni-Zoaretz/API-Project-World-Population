@@ -3,30 +3,46 @@ const america = document.querySelector(".america");
 const asia = document.querySelector(".asia");
 const europe = document.querySelector(".europe");
 const oceania = document.querySelector(".oceania");
+const btnBox = document.querySelector(".all-btn");
+const allContinentBtn = document.querySelectorAll(".continent-btn");
 
 let region = "";
 
+// allContinentBtn.forEach((continent) => {
+//   continent.addEventListener("click", function (e) {
+//     getContinentCountries(e.target.innerText);
+// btnBox.innerHTML = "";
+//   });
+// });
+
 africa.addEventListener("click", function () {
   region = "africa";
-  getContinentCountries(region);
+  getContinentCountriesData(region);
+  btnBox.innerHTML = "";
 });
 
 america.addEventListener("click", function () {
   region = "Americas";
-  getContinentCountries(region);
+  getContinentCountriesData(region);
+  btnBox.innerHTML = "";
 });
 
 asia.addEventListener("click", function () {
   region = "asia";
-  getContinentCountries(region);
+  getContinentCountriesData(region);
+  btnBox.innerHTML = "";
 });
 
 europe.addEventListener("click", function () {
   region = "europe";
-  getContinentCountries(region);
+  getContinentCountriesData(region);
+  btnBox.innerHTML = "";
 });
 
 oceania.addEventListener("click", function () {
   region = "oceania";
-  getContinentCountries(region);
+  getContinentCountriesData(region);
+  btnBox.innerHTML = "";
 });
+
+// ---------------event listenr of all the btn---------------
