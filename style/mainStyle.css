@@ -12,10 +12,12 @@ body {
   width: 100vw;
   /* flex-direction: column; */
   font-family: "Roboto", sans-serif;
+  background: url("/bg.jpg") no-repeat;
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1rem;
+  margin-top: 1rem;
   /* border: 1px solid rgb(132, 229, 14); */
 }
 
@@ -24,7 +26,10 @@ body {
 }
 
 .all-btn {
-  /* border: 1px solid rgb(187, 238, 67); */
+  border: 1px solid rgb(187, 238, 67);
+  width: 80%;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .container {
@@ -36,7 +41,7 @@ body {
 }
 
 .continent {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 1rem;
 }
 

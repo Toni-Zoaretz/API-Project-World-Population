@@ -1,0 +1,12 @@
+/* .chart {
+  height: 50%;
+  width: 50%;
+} */
+
+#myChart {
+  height: 100%;
+  width: 50vw;
+  /* background-color: aquamarine; */
+
+  /* display: flex; */
+}

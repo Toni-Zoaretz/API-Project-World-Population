@@ -1,5 +1,7 @@
-/// function continent
-
+// ---------------------------chart------------------------
+const ctx = document.getElementById("myChart");
+let isChart = false;
+// ----------------------------functions------------------
 let countriesNamesArr = [];
 let countriesPopulationArr = [];
 async function getContinentCountriesData(region) {
@@ -15,6 +17,7 @@ async function getContinentCountriesData(region) {
       countriesPopulationArr.push(country.population);
     });
     createbtn(countriesNamesArr);
+    drawChart(countriesNamesArr, countriesPopulationArr);
     // console.log(countriesNamesArr);
     // console.log(countriesPopulationArr);
   } catch (erroe) {
@@ -22,17 +25,13 @@ async function getContinentCountriesData(region) {
   }
 }
 
-// --------------------------------------------------------Function to creat bttons ------------------------------------------------
+// --------------------------------------------------------Function to creat bttons-------------------------------------------------
 function createbtn(countriesNamesArr) {
   for (let i = 0; i < countriesNamesArr.length; i++) {
     // console.log(countriesNamesArr[i]);
     let btn = document.createElement("button");
     btn.innerText = countriesNamesArr[i];
     btnBox.appendChild(btn);
-    // btn.addEventListener("click", function (e) {
-    //   console.log(e.target.innerText);
-    // });
-    // console.log(btn);
   }
 }
 
@@ -79,10 +78,51 @@ async function getCountriesCitiesData(country) {
       citiesNamesArr.push(cityName.city);
       citiesPopulationArr.push(cityName.populationCounts[0].value);
     });
+    drawChart(citiesNamesArr, citiesPopulationArr);
     console.log(citiesPopulationArr);
     console.log(citiesNamesArr);
     // console.log(data);
   } catch (error) {
     console.log("error");
   }
+}
+
+// export default {
+//   countriesNamesArr,
+//   countriesPopulationArr,
+//   citiesNamesArr,
+//   citiesPopulationArr,
+// };
+
+// --------------------------chart-------------------------------------
+
+function drawChart(country, population) {
+  countriesNamesArr = [];
+  countriesPopulationArr = [];
+
+  if (isChart === true) {
+    myChart.destroy();
+  }
+  isChart = true;
+  myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: country,
+      datasets: [
+        {
+          label: "# of Population",
+          data: population,
+          borderWidth: 1,
+          borderColor: "rgb(60, 150, 12)",
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
 }
