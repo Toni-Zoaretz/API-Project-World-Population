@@ -110,10 +110,10 @@ function drawChart(country, population) {
       labels: country,
       datasets: [
         {
-          label: "# of Population",
+          label: "number of Population",
           data: population,
           borderWidth: 1,
-          borderColor: "rgb(60, 150, 12)",
+          borderColor: "#017a47",
         },
       ],
     },

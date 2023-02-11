@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
       rel="stylesheet"
     />
+    <script src="/script/spinner.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="/script/chart.js" defer></script>
     <script src="/script/domElements.js" defer></script>
@@ -17,6 +18,7 @@
     <script src="/script/mainLogic.js" defer></script>
     <link rel="stylesheet" href="/style/mainStyle.css" />
     <link rel="stylesheet" href="/style/chartStyle.css" />
+    <link rel="stylesheet" href="/style/spinner.css" />
     <title>API World Population</title>
   </head>
   <body>
@@ -25,18 +27,17 @@
         <h1>World Population</h1>
       </div>
       <div class="continent">
-        <button class="africa">Africa</button>
-        <button class="america">America</button>
-        <button class="asia">Asia</button>
-        <button class="europe">Europe</button>
-        <button class="oceania">Oceania</button>
+        <button class="africa btn-continent" id="test">Africa</button>
+        <button class="america btn-continent">America</button>
+        <button class="asia btn-continent">Asia</button>
+        <button class="europe btn-continent">Europe</button>
+        <button class="oceania btn-continent">Oceania</button>
       </div>
+      <div class="loader loader-hidden"></div>
       <div class="chart">
         <canvas id="myChart"></canvas>
       </div>
-      <div class="all-btn">
-        <!-- <span>buttons</span> -->
-      </div>
+      <div class="all-btn"></div>
     </div>
   </body>
 </html>
