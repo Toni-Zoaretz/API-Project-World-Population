@@ -1,8 +1,11 @@
-const btnTest = document.querySelector("#test");
+const continentDiv = document.querySelector(".continent");
 const loader = document.querySelector(".loader");
 
-btnTest.addEventListener("click", function () {
+continentDiv.addEventListener("click", function (e) {
+  btnBox.innerHTML = "";
   loader.classList.remove("loader-hidden");
+  getContinentCountriesData(e.target.classList[0]);
+  console.log(e.target);
 });
 
 loader.addEventListener("transitionend", () => {

@@ -12,7 +12,6 @@
     />
     <script src="/script/spinner.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="/script/chart.js" defer></script>
     <script src="/script/domElements.js" defer></script>
     <script src="/script/eventListener.js" defer></script>
     <script src="/script/mainLogic.js" defer></script>
@@ -27,8 +26,8 @@
         <h1>World Population</h1>
       </div>
       <div class="continent">
-        <button class="africa btn-continent" id="test">Africa</button>
-        <button class="america btn-continent">America</button>
+        <button class="africa btn-continent">Africa</button>
+        <button class="americas btn-continent">America</button>
         <button class="asia btn-continent">Asia</button>
         <button class="europe btn-continent">Europe</button>
         <button class="oceania btn-continent">Oceania</button>
@@ -36,6 +35,9 @@
       <div class="loader loader-hidden"></div>
       <div class="chart">
         <canvas id="myChart"></canvas>
+      </div>
+      <div class="hidden-info">
+        <span>SORRY NO INFORMATION ABOUT THIS COUNTRY :(</span>
       </div>
       <div class="all-btn"></div>
     </div>

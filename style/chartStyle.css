@@ -1,14 +1,16 @@
 .chart {
-  background-color: rgba(255, 255, 255, 0.66);
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
   justify-content: center;
   display: flex;
+  width: 100%;
+  padding: 0rem 20%;
 }
 
 #myChart {
   width: 60rem;
+  background-color: rgba(255, 255, 255, 0.66);
+  border-radius: 1rem;
+  padding: 2rem;
 }
-
-/* ------------loader------------- */
