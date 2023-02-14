@@ -1,3 +1,4 @@
+"use strict";
 const africa = document.querySelector(".africa");
 const america = document.querySelector(".americas");
 const asia = document.querySelector(".asia");

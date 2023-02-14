@@ -1,3 +1,4 @@
+"use strict";
 const continentDiv = document.querySelector(".continent");
 const loader = document.querySelector(".loader");
 
