@@ -116,6 +116,12 @@ span {
   body #myChart {
     padding: 0.2rem;
   }
+
+  span {
+    font-weight: 600;
+    font-size: 0.8rem;
+    /* display: flex; */
+  }
 }
 
 @media (min-width: 901px) {
